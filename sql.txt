@@ -1,0 +1,38 @@
+products table format:
++-------+---------------+------+-----+---------+----------------+
+| Field | Type          | Null | Key | Default | Extra          |
++-------+---------------+------+-----+---------+----------------+
+| id    | int(11)       | NO   | PRI | NULL    | auto_increment |
+| item  | varchar(500)  | YES  |     | NULL    |                |
+| type  | varchar(50)   | YES  |     | NULL    |                |
+| qty   | int(11)       | YES  |     | NULL    |                |
+| price | decimal(20,2) | YES  |     | NULL    |                |
++-------+---------------+------+-----+---------+----------------+
+
+products table creation:
+CREATE TABLE `products` (
+  `id` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `item` varchar(500),
+  `type` varchar(50),
+  `qty` int(11),
+  `price` decimal(20,2));
+
+
+purchase table format:
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| id          | int(11)     | NO   | PRI | NULL    | auto_increment |
+| item_name   | varchar(45) | YES  |     | NULL    |                |
+| qty         | varchar(45) | YES  |     | NULL    |                |
+| tax         | varchar(45) | YES  |     | NULL    |                |
+| total_price | varchar(45) | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+
+purchase table creation:
+CREATE TABLE `purchase` (
+  `id` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `item_name` varchar(45),
+  `qty` varchar(45),
+  `tax` varchar(45),
+  `total_price` varchar(45));
